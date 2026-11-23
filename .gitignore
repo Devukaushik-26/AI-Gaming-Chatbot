@@ -5,4 +5,3 @@ venv/
 env/
 .env
 .DS_Store
-static/background.mp4
