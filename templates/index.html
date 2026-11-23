@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Valorant Gaming Chatbot</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline id="background-video">
+        <source src="{{ url_for('static', filename='background.mp4') }}"
+                type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Dark Overlay -->
+    <div class="video-overlay"></div>
+
+    <!-- Valorant Logo - Top Left -->
+    <img
+        src="{{ url_for('static', filename='valo logo.png') }}"
+        alt="Valorant Logo"
+        id="valorant-logo"
+    >
+
+    <!-- Main Scrollable Page Content -->
+    <main class="page-content">
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <span class="hero-tag">VALORANT FAN PROJECT // COMPLETE FIELD MANUAL</span>
+            <h1>MASTER AGENTS, MAPS, WEAPONS &amp; STRATEGY</h1>
+            <p>
+                Explore agent roles, featured agents, map mechanics, weapon classes,
+                and round economy tips—or open the robot assistant anytime for instant
+                answers.
+            </p>
+            <div class="hero-actions">
+                <button type="button" class="btn-primary" id="heroAskBtn">
+                    Ask Valorant Bot
+                </button>
+                <a href="#roles" class="btn-secondary">Roles</a>
+                <a href="#agents" class="btn-secondary">Agents</a>
+                <a href="#maps" class="btn-secondary">Maps</a>
+                <a href="#weapons" class="btn-secondary">Weapons</a>
+                <a href="#economy" class="btn-secondary">Economy &amp; Tips</a>
+            </div>
+        </section>
+
+        <!-- Agent Roles -->
+        <section class="content-section" id="roles">
+            <h2>AGENT ROLES</h2>
+            <div class="card-grid">
+                <article class="info-card">
+                    <span class="role-badge">DUELIST</span>
+                    <h3>Entry &amp; Space Creation</h3>
+                    <p>
+                        Leads pushes, takes opening duels, and uses mobility or flashes
+                        to break onto sites.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <span class="role-badge">INITIATOR</span>
+                    <h3>Info &amp; Setup</h3>
+                    <p>
+                        Scouts angles, gathers intel, and sets up teammates with flashes,
+                        recon, and crowd control.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <span class="role-badge">CONTROLLER</span>
+                    <h3>Map &amp; Vision Control</h3>
+                    <p>
+                        Uses smokes and walls to block sightlines, split sites, and
+                        control enemy rotations.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <span class="role-badge">SENTINEL</span>
+                    <h3>Defense &amp; Flank Watch</h3>
+                    <p>
+                        Secures flanks, holds sites with defensive utility, and punishes
+                        over-aggression.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Featured Agents -->
+        <section class="content-section" id="agents">
+            <h2>FEATURED AGENTS</h2>
+            <div class="card-grid">
+                <article class="info-card">
+                    <span class="role-badge">DUELIST</span>
+                    <h3>Jett</h3>
+                    <p>
+                        Agile wind-themed duelist focused on fast dashes, vertical
+                        updrafts, and high-mobility plays.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <span class="role-badge">DUELIST</span>
+                    <h3>Neon</h3>
+                    <p>
+                        High-speed duelist built around sprinting, electric barriers,
+                        and aggressive pace shifts.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <span class="role-badge">CONTROLLER</span>
+                    <h3>Brimstone</h3>
+                    <p>
+                        Reliable tactical controller offering precision smokes, molly
+                        lineups, and area denial.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <span class="role-badge">DUELIST</span>
+                    <h3>Reyna</h3>
+                    <p>
+                        Duel-heavy agent that converts eliminations into sustain or
+                        invulnerable repositioning.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <span class="role-badge">INITIATOR</span>
+                    <h3>Sova &amp; Breach</h3>
+                    <p>
+                        Recon arrows, drones, flashes, and concussions that clear
+                        corners and set up site entries.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <span class="role-badge">SENTINEL</span>
+                    <h3>Killjoy &amp; Cypher</h3>
+                    <p>
+                        Lock down sites and watch flanks with traps, tripwires, cameras,
+                        and defensive setups.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Maps Section -->
+        <section class="content-section" id="maps">
+            <h2>VALORANT MAPS &amp; MECHANICS</h2>
+            <p class="section-intro">
+                Valorant features 13 standard maps (with a rotating 7-map competitive
+                pool each Act, plus Team Deathmatch arenas and The Range).
+                Every map rewards knowing its unique layout and mechanics.
+            </p>
+            <div class="card-grid">
+                <article class="info-card">
+                    <span class="role-badge">3 SITES // DOORS</span>
+                    <h3>Lotus &amp; Haven</h3>
+                    <p>
+                        Three-site maps that stretch defenses thin and punish slow
+                        rotations; Lotus adds rotating stone doors and a breakable wall.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <span class="role-badge">MECHANIC</span>
+                    <h3>Summit</h3>
+                    <p>
+                        Three-lane, two-site academy map featuring droppable walls that
+                        can seal routes and reshape sightlines mid-round.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <span class="role-badge">NO MID // TELEPORTERS</span>
+                    <h3>Bind</h3>
+                    <p>
+                        Two sites with no traditional mid lane and one-way teleporters
+                        for fast cross-map rotates and flanks.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <span class="role-badge">CLASSIC // DOORS</span>
+                    <h3>Ascent &amp; Sunset</h3>
+                    <p>
+                        Classic three-lane layouts where mid control matters heavily,
+                        with sealable site doors on Ascent and a mid mechanical door on Sunset.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <span class="role-badge">VERTICAL &amp; HIGH RISK</span>
+                    <h3>Abyss &amp; Icebox</h3>
+                    <p>
+                        Abyss features open chasms with gravity knockouts, while
+                        Icebox packs verticality, ziplines, and layered angles.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <span class="role-badge">MORE ROTATION MAPS</span>
+                    <h3>Split, Breeze, Fracture, Pearl &amp; Corrode</h3>
+                    <p>
+                        Split uses ascender ropes and tight angles, Breeze
+                        favors long sightlines, Fracture splits attacker
+                        spawns, Pearl focuses on map geo, and Corrode centers on a radianite salt mine.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Weapons Section -->
+        <section class="content-section" id="weapons">
+            <h2>WEAPONS &amp; ARSENAL</h2>
+            <p class="section-intro">
+                Choose weapons based on round budget, engagement distance, and your
+                role in the round.
+            </p>
+            <div class="card-grid">
+                <article class="info-card">
+                    <span class="role-badge">RIFLES // FULL BUY</span>
+                    <h3>Vandal &amp; Phantom</h3>
+                    <p>
+                        Vandal deals lethal headshots at any range; Phantom
+                        offers faster fire rate, silenced shots, and smoother sprays.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <span class="role-badge">BUDGET RIFLES</span>
+                    <h3>Bulldog &amp; Guardian</h3>
+                    <p>
+                        Bulldog brings scope burst fire for mid-range value, while
+                        Guardian rewards accurate semi-auto one-taps.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <span class="role-badge">SMGS</span>
+                    <h3>Spectre &amp; Stinger</h3>
+                    <p>
+                        Great for anti-eco and half-buy rounds: Spectre is
+                        silenced and versatile, while Stinger shreds up close with high fire rate.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <span class="role-badge">SIDEARMS</span>
+                    <h3>Classic, Ghost, Sheriff, Frenzy, Shorty &amp; Bandit</h3>
+                    <p>
+                        Strong pistol-round and eco options—from the free
+                        Classic and silenced Ghost to heavy-hitting
+                        Sheriff and close-range sidearms.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <span class="role-badge">SNIPERS</span>
+                    <h3>Marshal, Outlaw &amp; Operator</h3>
+                    <p>
+                        Marshal is light and mobile, Outlaw packs twin-barrel
+                        punch, and Operator locks down long lanes with one-shot body damage.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <span class="role-badge">SHOTGUNS &amp; HEAVIES</span>
+                    <h3>Bucky, Judge, Ares &amp; Odin</h3>
+                    <p>
+                        Bucky and Judge dominate tight corners, while
+                        Ares and Odin suppress chokes and penetrate cover.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Economy & Gameplay Tips -->
+        <section class="content-section" id="economy">
+            <h2>ECONOMY &amp; GAMEPLAY TIPS</h2>
+            <div class="card-grid">
+                <article class="info-card">
+                    <h3>Pistol &amp; Eco Rounds</h3>
+                    <p>
+                        Pair a sidearm with shields or utility on pistol round,
+                        and save credits together on eco rounds so your team can full-buy
+                        next round.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <h3>Full Buy Priority</h3>
+                    <p>
+                        A true full buy balances rifle, shields, and key abilities—never
+                        buy a rifle with zero utility or shields if your team is saving.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <h3>Minimap &amp; Rotations</h3>
+                    <p>
+                        Check the minimap often to spot enemy utility, call early rotates,
+                        and avoid leaving sites or flanks unguarded.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <h3>Gunfight Discipline</h3>
+                    <p>
+                        Keep crosshairs at head height, stop moving before shooting, and
+                        use smokes, flashes, or info before peeking.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Page Footer -->
+        <footer class="site-footer">
+            <span>VALORANT FAN PROJECT • NOT AFFILIATED WITH RIOT GAMES</span>
+            <span>NEED SPECIFIC LINEUPS, AGENTS, OR WEAPON STATS? ASK THE BOT.</span>
+        </footer>
+
+    </main>
+
+    <!-- Main Chatbot -->
+    <div class="chatbot-container" id="chatbot">
+
+        <div class="chat-header">
+            <div>
+                <h2>VALORANT BOT</h2>
+                <p>
+                    <span class="status-dot"></span>
+                    Agent Support Online
+                </p>
+            </div>
+
+            <div class="header-buttons">
+                <button id="expandBtn" title="Expand">⛶</button>
+                <button id="minimizeBtn" title="Minimize">−</button>
+            </div>
+        </div>
+
+        <div class="chat-content">
+
+            <div class="welcome-message">
+                <img
+                    src="{{ url_for('static', filename='chatbot logo.png') }}"
+                    alt="Chatbot Avatar"
+                    class="bot-avatar"
+                >
+                <div>
+                    <h3>WELCOME, AGENT!</h3>
+                    <p>
+                        Need information about Valorant?
+                        Ask me anything about agents, abilities,
+                        roles, and gameplay.
+                    </p>
+                </div>
+            </div>
+
+            <div class="suggestions" id="suggestions"></div>
+
+            <div class="chat-messages" id="messages"></div>
+
+        </div>
+
+        <form class="chat-input-area" id="chatForm">
+
+            <input
+                type="text"
+                id="userInput"
+                placeholder="Ask your question, Agent..."
+                autocomplete="off"
+                maxlength="300"
+                required
+            >
+
+            <button type="submit" id="sendBtn">➤</button>
+
+        </form>
+
+        <div class="chat-footer">
+            VALORANT FAN PROJECT
+            <button id="clearBtn">Clear Chat</button>
+        </div>
+
+    </div>
+
+    <!-- Restore Button -->
+    <button id="restoreBtn" class="restore-button" title="Open Valorant Bot">
+        <img
+            src="{{ url_for('static', filename='chatbot logo.png') }}"
+            alt="Chatbot Logo"
+            class="restore-logo"
+        >
+    </button>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
